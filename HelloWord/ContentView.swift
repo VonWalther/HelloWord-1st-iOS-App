@@ -11,10 +11,21 @@ struct ContentView: View {
     let hasImage = true
     
     var body: some View {
-        Image("Cover")
-            .resizable()
-            .scaledToFit()
-        Text("Cover")
+        VStack{
+            Text("A SwiftUI Kickstarter")
+                .background(Color.yellow)
+                .padding()
+                .background(Color.green)
+                .padding()
+                .font(.largeTitle)
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.purple)
+                .padding()
+                .background(Color.secondary)
+                .border(Color.red, width: 5)
+        }
+        
     }
 }
 
@@ -22,6 +33,8 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ContentView()
+                .previewLayout(.sizeThatFits)
+                
         }
     }
 }
