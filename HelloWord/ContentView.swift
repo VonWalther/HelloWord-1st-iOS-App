@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    let hasImage = true
+    
     var body: some View {
-        Text("Hello, how are you?")
-            .font(.largeTitle)
-            .fontWeight(.bold)
-            .foregroundColor(Color.red)
-            .padding([.leading, .bottom], 17.0)
-            
-            
+        Image("Cover")
+            .resizable()
+            .scaledToFit()
+        Text("Cover")
     }
 }
 
@@ -23,11 +22,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ContentView()
-                .preferredColorScheme(.light)
-                
         }
-            
-            
-            
     }
 }
